@@ -4,7 +4,7 @@
 詳細
 http://qiita.com/shodaisuzuki/items/a5f58a501bec0e7bab2c
 
-# bin/create_csv.sh
+# bin/column_export_csv.sh
 
 指定したテーブルのカラム一覧をCSV出力する
 
