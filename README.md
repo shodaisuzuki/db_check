@@ -4,10 +4,6 @@
 詳細
 http://qiita.com/shodaisuzuki/items/a5f58a501bec0e7bab2c
 
-# bin/db_counts.sh
-
-DB内の全テーブルのレコード数を表示させる
-
 # bin/create_csv.sh
 
 指定したテーブルのカラム一覧をCSV出力する
