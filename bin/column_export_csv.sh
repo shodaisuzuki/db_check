@@ -16,7 +16,7 @@ do
     COLUMN_LIST=(`eval $COLUMN_LIST_CMD`)
     COLUMN="$(IFS=,; echo "${COLUMN_LIST[*]}")"
     
-    OUTPUT_DIR=./csv 
+    OUTPUT_DIR=../$EXPORT_DIR/culumn_export/ 
     
     if [ ! -e $OUTPUT_DIR ]; then
       mkdir $OUTPUT_DIR
@@ -24,7 +24,7 @@ do
 
    #CSV出力
     SOURCE_SQL="select ${COLUMN} FROM $table"
-    SOURCE_CMD="psql -U ${SOURCE_USER_NAME} ${SOURCE_DB_NAME} -c '${SOURCE_SQL}' -A -F, > csv/${table}.csv"    
+    SOURCE_CMD="psql -U ${SOURCE_USER_NAME} ${SOURCE_DB_NAME} -c '${SOURCE_SQL}' -A -F, > "$OUTPUT_DIR/${table}.csv"
     eval $SOURCE_CMD
     echo $table
 done
