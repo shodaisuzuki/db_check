@@ -8,6 +8,9 @@ psql.confで指定したデータベースのテーブル名を全て取得
 TABLE_LIST_CMD="echo 'select relnameas TABLE_NAME from pg_stat_user_tables;' | psql $OPTIONS -t"
 TABLES=(`eval $TABLE_LIST_CMD`)
 
+# HACK:以下で代用できる
+#      psql ${OPTIONS} -c "SQL文" -A -F, > "../$EXPORT_DIR/$EXPORT_FILE_NAME.csv"
+
 #出力csvのヘッダを挿入
 echo "table_name,count" >> "../$EXPORT_DIR/$EXPORT_FILE_NAME.csv"
 
