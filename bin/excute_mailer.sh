@@ -1,8 +1,6 @@
-ER=""
-PG_PASSWORD=""
-PG_HOST=""
-PG_PORT=""
-DB_NAME=""
+#! /bin/bash
+
+source ../psql.conf
 
 export PGPASSWORD=$PG_PASSWORD
 IFS=','
@@ -22,7 +20,7 @@ FROM
   post;
 "
     
-result=`psql -U $PG_USER -h $PG_HOST -p $PG_PORT -d $DB_NAME <<_EOD
+result=`psql -U $USER_NAME -h $HOST_NAME -p $PORT -d $DB_NAME <<_EOD
    \timing
    $GET_USER_SQL
    $GET_POST_SQL
