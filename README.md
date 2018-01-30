@@ -13,6 +13,10 @@ http://qiita.com/shodaisuzuki/items/a5f58a501bec0e7bab2c
 
 指定したDBの全テーブルのデータ数をCSV出力する
 
+## excute_mailer.sh
+
+クエリの実行結果をメール送信する
+
 # psql.conf
 PostgreSQLの設定値を記述します。
 このファイルは各実行ファイルで読み込まれています。
