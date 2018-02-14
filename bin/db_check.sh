@@ -14,7 +14,7 @@ TARGET_PASSWORD=""
 TARGET_PORT=""
 
 # 指定したデーベースのテーブル名を全て取得
-CMD="echo 'select relname as TABLE_NAME from pg_stat_user_tables;' | psql $/OPTIONS -t"
+CMD="echo 'select relname as TABLE_NAME from pg_stat_user_tables;' | psql $OPTIONS -t"
 TABLES=(`eval $CMD`)
 
 # 各テーブルごとにcountの結果を比較
