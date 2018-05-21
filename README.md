@@ -2,6 +2,7 @@
 
 # 構成
 
+```
 ├── README.md
 ├── bin
 │   ├── column_export_csv.sh
@@ -11,6 +12,7 @@
 │   └── table_data_count.sh
 ├── export
 └── psql.conf
+```
 
 ## bin
 ### db_check.sh
