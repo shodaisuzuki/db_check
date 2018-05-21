@@ -17,6 +17,10 @@ http://qiita.com/shodaisuzuki/items/a5f58a501bec0e7bab2c
 
 クエリの実行結果をメール送信する
 
+## objects_data_size_export.sh
+
+全テーブル、インデックスのデータサイズを大きい順にソートしてCSV出力する
+
 # psql.conf
 PostgreSQLの設定値を記述します。
 このファイルは各実行ファイルで読み込まれています。
